@@ -16,6 +16,8 @@ process.on('beforeExit', () => {
   });
 });
 
+app.use('/projects', require('./routes/projects.routes.js'));
+
 // set port, listen for requests
 const server = app.listen(PORT, () => {
   if (process.env.NODE_ENV !== 'test') {
