@@ -46,6 +46,23 @@ class Project {
     return db.query('SELECT * FROM project');
   }
 
+  static async getProjectClient(project_id) {
+    return db
+      .query(
+        'SELECT client.name, client.company, client.website FROM project LEFT JOIN client ON client.id = project.client_id WHERE project.id = ?', // eslint-disable-next-line
+        [project_id]
+      )
+      .then((rows) => {
+        if (rows.length) {
+          return Promise.resolve(rows[0]);
+        } else {
+          const err = new Error();
+          err.kind = 'not_found';
+          return Promise.reject(err);
+        }
+      });
+  }
+
   static async updateById (id, project) {
     return db.query(
       'UPDATE project SET name = ?, image = ?, link = ?, duration = ?, presentation = ?, logo = ?, content = ?, client_id = ? WHERE id = ?',

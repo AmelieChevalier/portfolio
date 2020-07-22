@@ -49,7 +49,17 @@ class ProjectsController {
   static async findOne (req, res) {
     try {
       const data = await Project.findById(req.params.id);
-      res.send({ data });
+
+      let client = {};
+
+      try {
+        client = await Project.getProjectClient(data.id);
+      } catch (err) {
+        console.log('client non trouvé')
+        console.error(err);
+      }
+
+      res.send({ data: {...data, client} });
     } catch (err) {
       if (err.kind === 'not_found') {
         res.status(404).send({ errorMessage: `Project with id ${req.params.id} not found.` });
