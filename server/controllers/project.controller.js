@@ -35,6 +35,8 @@ class ProjectsController {
         duration: p.duration,
         presentation: p.presentation,
         client_id: p.client_id,
+        logo: p.logo,
+        content: p.content
       }));
       res.send({ data });
     } catch (err) {

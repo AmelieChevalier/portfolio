@@ -9,6 +9,8 @@ class Project {
     this.duration = project.duration;
     this.presentation = project.presentation;
     this.client_id = project.client_id;
+    this.logo = project.logo;
+    this.content = project.content;
   }
 
 
@@ -46,8 +48,8 @@ class Project {
 
   static async updateById (id, project) {
     return db.query(
-      'UPDATE project SET name = ?, image = ?, link = ?, duration = ?, presentation = ?, client_id = ? WHERE id = ?',
-      [project.name, project.image, project.link, project.duration, project.presentation, project.client_id, id]
+      'UPDATE project SET name = ?, image = ?, link = ?, duration = ?, presentation = ?, logo = ?, content = ?, client_id = ? WHERE id = ?',
+      [project.name, project.image, project.link, project.duration, project.presentation, project.logo, project.content, project.client_id, id]
     ).then(() => this.findById(id));
   }
 
