@@ -3,8 +3,7 @@ import "../styles/ProjectContent.css";
 import { Link } from 'react-router-dom';
 
 export default function ProjecContent({ name, id, logo, presentation }) {
-  console.log(name)
-  console.log(logo)
+
   return (
     <div className="project-container">
       <h2>{name}</h2>

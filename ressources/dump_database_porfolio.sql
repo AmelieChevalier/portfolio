@@ -13,14 +13,6 @@ CREATE TABLE `project` (
   PRIMARY KEY (`id`))
   ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `client` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NULL,
-  `company` VARCHAR(45) NULL,
-  `website` VARCHAR(500) NULL,
-  PRIMARY KEY (`id`))
-  ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
 CREATE TABLE `techno` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
@@ -37,12 +29,16 @@ CREATE TABLE `project_techno` (
 ALTER TABLE `project` 
 CHANGE COLUMN `presentation` `presentation` LONGTEXT NULL DEFAULT NULL ;
 
-ALTER TABLE `portfolio`.`project` 
+ALTER TABLE `project` 
 ADD COLUMN `logo` VARCHAR(500) NULL AFTER `client_id`;
 
-ALTER TABLE `portfolio`.`project` 
+ALTER TABLE `project` 
 ADD COLUMN `content` VARCHAR(45) NULL AFTER `logo`;
 
-ALTER TABLE `portfolio`.`project` 
+ALTER TABLE `project` 
 CHANGE COLUMN `content` `content` VARCHAR(1000) NULL DEFAULT NULL ;
 
+ALTER TABLE `project` 
+ADD COLUMN `client_website` VARCHAR(100) NULL AFTER `content`,
+ADD COLUMN `client_company` VARCHAR(45) NULL AFTER `client_website`,
+CHANGE COLUMN `client_id` `client_name` VARCHAR(45) NULL DEFAULT NULL ;

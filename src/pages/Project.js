@@ -9,13 +9,11 @@ const [currentProject, setCurrentProject] = useState({})
 
 const id = props.match.params.id
 
-console.log(currentProject.client)
 
 useEffect(() => {
   axios.get(`http://localhost:4000/projects/${id}`)
   .then(res => res.data)
   .then(data => {
-    console.log(data.data)
     setCurrentProject(data.data)
   })
 }, []) // eslint-disable-line
@@ -23,7 +21,7 @@ useEffect(() => {
 return (
   <div className='project-page'>
   <Link to='/' className='retour'>Retour</Link>
-  {(currentProject && currentProject.client) && (
+  {(currentProject ) && (
   <div className='full-project-container'> 
     <h1>{currentProject.name}</h1>
     <img src={currentProject.image} alt="project-illustration" className="full-project-image" />
@@ -36,9 +34,9 @@ return (
       </div>
       <div className='client-details sub-section-project'>
         <h2>Client</h2>
-        <p>Nom : {currentProject.client.name}</p>
-        <p>Entreprise: {currentProject.client.company}</p>
-        <a href={`${currentProject.client.website}`} target='_blank' rel='noopener noreferrer'>Site internet</a>
+        <p>Nom : {currentProject.client_name}</p>
+        <p>Entreprise: {currentProject.client_company}</p>
+        <a href={`${currentProject.client_website}`} target='_blank' rel='noopener noreferrer'>Site internet</a>
       </div>
     </div>
   </div>

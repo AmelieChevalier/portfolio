@@ -23,7 +23,6 @@ process.on('beforeExit', () => {
 });
 
 app.use('/projects', require('./routes/projects.routes.js'));
-app.use('/clients', require('./routes/clients.routes.js'));
 
 // set port, listen for requests
 const server = app.listen(PORT, () => {

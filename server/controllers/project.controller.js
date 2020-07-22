@@ -34,7 +34,9 @@ class ProjectsController {
         link: p.link,
         duration: p.duration,
         presentation: p.presentation,
-        client_id: p.client_id,
+        client_name: p.client_name,
+        client_company: p.client_company,
+        client_website: p.client_website,
         logo: p.logo,
         content: p.content
       }));
