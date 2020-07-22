@@ -28,4 +28,4 @@ CREATE TABLE `project_techno` (
   `id_techno` INT NULL,
   `id_project` INT NULL,
   PRIMARY KEY (`id`))
-  ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  

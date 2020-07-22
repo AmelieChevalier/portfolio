@@ -1,7 +1,0 @@
-DROP TABLE IF EXISTS `project`;
-
-DROP TABLE IF EXISTS `client`;
-
-DROP TABLE IF EXISTS `techno`;
-
-DROP TABLE IF EXISTS `project_techno`;
