@@ -19,6 +19,14 @@
   text-align: justify;
 }
 
+p.project-presentation {
+margin-bottom: 30px;
+}
+
+a.see-details:hover {
+  color: rgba(34, 129, 119, 0.6);;
+}
+
 @media only screen and (max-width: 600px) {
   img.project-image {
     height: 150x;

@@ -19,3 +19,9 @@ a:visited {
   text-decoration: none;
   color: rgba(34, 129, 119);
 }
+
+ul li {
+  color: rgba(34, 129, 119);
+  list-style-type: none;
+  text-align: left;
+}

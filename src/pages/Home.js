@@ -49,8 +49,14 @@ function Home() {
             <h1>QUI SUIS-JE ?</h1>
           </div>
           <div className='presentation-details'>
-            <h2 className='sub-section-presentation'>Formation</h2>
-            <h2 className='sub-section-presentation'>Compétences</h2>
+            <div className='sub-section-presentation'>
+              <h2 >Formation</h2>
+              <p>Ingénieure chimiste de formation, je me suis reconvertie en developpment Web à la Wild Code School de Lyon</p>
+            </div>
+            <div className='sub-section-presentation'>
+            <h2>Compétences</h2>
+            <p>React.js | Node.js | mySQL | Git | Méthode Agile SCRUM</p>
+            </div>
           </div>
         </div>
       </div>

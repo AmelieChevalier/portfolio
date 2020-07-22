@@ -57,6 +57,10 @@
   padding: 15px;
 }
 
+.sub-section-presentation p {
+  text-align: left;
+}
+
 @media only screen and (max-width: 600px) {
   .project-details {
     display: flex;

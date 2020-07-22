@@ -12,7 +12,7 @@ export default function ProjecContent({ name, id, logo, presentation }) {
         <img src={logo} alt="project-illustration" className="project-image" />
       </div>
       <p className="project-presentation">{presentation}</p>
-      <Link to={`/project/${id}`}>Voir les détails du projet</Link>
+      <Link to={`/project/${id}`} className='see-details'>Voir les détails du projet</Link>
     </div>
   );
 }
