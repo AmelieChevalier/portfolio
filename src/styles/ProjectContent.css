@@ -1,12 +1,18 @@
 .project-container {
   margin: 15px;
   width: 400px;
+  border: 1px solid rgba(130, 186, 173, 0.3);
+  padding: 15px;
 }
 
 .project-image {
   height: 150px;
-  background-color: rgba(130, 186, 173, 0.3);
   padding: 5px;
+}
+
+.image-container {
+/*   background-color: rgba(130, 186, 173, 0.4); */
+  width: 100%;
 }
 
 .project-container p {
@@ -16,7 +22,6 @@
 @media only screen and (max-width: 600px) {
   img.project-image {
     height: 150x;
-    background-color: rgba(130, 186, 173, 0.3);
     padding: 5px;
   }
 

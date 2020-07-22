@@ -3,19 +3,19 @@
 }
 
 body {
-  background-color:rgba(85, 129, 119);
+  background-color: white
 }
 
 h1, h2, h3, p {
-  color: white;
+  color: rgba(34, 129, 119);
 }
 
 a {
   text-decoration: none;
-  color: white
+  color: rgba(34, 129, 119);
 }
 
 a:visited {
   text-decoration: none;
-  color: white
+  color: rgba(34, 129, 119);
 }

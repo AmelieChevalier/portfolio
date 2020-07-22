@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ProjectContent from '../components/ProjectContent';
+import Header from '../components/Header';
 import axios from "axios";
+import backGroundImage from '../images/fond.jpg'
 import "../styles/Home.css";
 
 function Home() {
@@ -18,15 +20,18 @@ function Home() {
 
   return (
     <>
+      <div className='home-header' style={{backgroundImage:  `url(${backGroundImage})`}}>
+      <Header />
       <div className="presentation">
         <h1>AMELIE CHEVALIER</h1>
         <h2>Developpeuse Web</h2>
         <h2>React JS | Node JS</h2>
       </div>
+      </div>
       <div className="sections-container">
         <div className="projects-presentation">
           <div className="project-title">
-            <h1>Mes projets</h1>
+            <h1>MES PROJETS</h1>
           </div>
           <div className='project-details'>
             {allProjects.length > 0 &&
@@ -41,10 +46,11 @@ function Home() {
         </div>
         <div className="personnal-presentation">
           <div className="presentation-title">
-            <h1>Qui suis-je ?</h1>
+            <h1>QUI SUIS-JE ?</h1>
           </div>
           <div className='presentation-details'>
-            <h2>Ingénieure chimiste de formation</h2>
+            <h2 className='sub-section-presentation'>Formation</h2>
+            <h2 className='sub-section-presentation'>Compétences</h2>
           </div>
         </div>
       </div>

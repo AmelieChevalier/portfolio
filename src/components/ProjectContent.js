@@ -8,7 +8,9 @@ export default function ProjecContent({ name, id, logo, presentation }) {
   return (
     <div className="project-container">
       <h2>{name}</h2>
-      <img src={logo} alt="project-illustration" className="project-image" />
+      <div className='image-container'>
+        <img src={logo} alt="project-illustration" className="project-image" />
+      </div>
       <p className="project-presentation">{presentation}</p>
       <Link to={`/project/${id}`}>Voir les détails du projet</Link>
     </div>

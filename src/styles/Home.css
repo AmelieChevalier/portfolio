@@ -1,7 +1,14 @@
+.home-header {
+  background-position:center;
+  background-size:cover;
+}
+
+.home-header h1, .home-header h2 {
+  color: white
+}
+
 .presentation {
-  margin-top: 50px;
-  background-color: rgba(130, 186, 173, 0.3);
-  padding: 15px 0;
+  padding: 50px 0 130px 0;
 }
 
 .personnal-presentation {
@@ -37,6 +44,19 @@
   flex-direction: row;
 }
 
+.presentation-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.sub-section-presentation {
+  margin: 0 15px;
+  margin: 15px;
+  width: 400px;
+  border: 1px solid rgba(130, 186, 173, 0.3);
+  padding: 15px;
+}
+
 @media only screen and (max-width: 600px) {
   .project-details {
     display: flex;
@@ -46,4 +66,16 @@
     margin-top: 50px;
   }
 
+  .presentation-details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sub-section-presentation {
+    margin: 0 15px;
+    margin: 15px;
+    width: 300px;
+    border: 1px solid rgba(130, 186, 173, 0.3);
+    padding: 15px;
+  }
 }
