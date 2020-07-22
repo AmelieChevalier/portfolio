@@ -3,7 +3,7 @@ const Project = require('../models/project.model.js');
 class ProjectsController {
   static async create (req, res) {
     if (!req.body) {
-      return res.status(400).send({ errorMessage: 'Content can not be empty!' });
+      return res.status(400).send({ errorMessage: 'Content for project can not be empty!' });
     }
 
     if (!req.body.name) {

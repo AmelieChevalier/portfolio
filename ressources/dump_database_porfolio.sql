@@ -29,3 +29,6 @@ CREATE TABLE `project_techno` (
   `id_project` INT NULL,
   PRIMARY KEY (`id`))
   
+ALTER TABLE `project` 
+CHANGE COLUMN `presentation` `presentation` LONGTEXT NULL DEFAULT NULL ;
+
