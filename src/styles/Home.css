@@ -6,6 +6,9 @@
 
 .personnal-presentation {
   margin-top: 100px;
+}
+
+.personnal-presentation .presentation-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,4 +33,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.personnal-presentation .presentation-details.shown {
+  background-color: rgba(130, 186, 173, 0.3);
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.personnal-presentation .presentation-details.hidden {
+  transition: all 0.4s ease-in-out;
+  opacity: 0;
 }

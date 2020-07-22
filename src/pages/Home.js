@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import arrowUp from '../images/arrow-up.png';
+import arrowDown from '../images/arrow-down.png';
+import axios from 'axios';
 import '../styles/Home.css';
 
 function Home() {
 
   const [projectIsOpen, setProjectIsOpen] = useState(false);
   const [presentationIsOpen, setPresentationIsOpen] = useState(false);
+  const [allProjects, setAllProjects] = useState([])
 
   const handleOpenPresentation = () => {
     setPresentationIsOpen(!presentationIsOpen)
@@ -14,6 +16,16 @@ function Home() {
   const handleOpenProject = () => {
     setProjectIsOpen(!projectIsOpen)
   }
+
+  useEffect (() => {
+    axios.get('http://localhost:4000/projects/')
+    .then(res => res.data)
+    .then(data => {
+      console.log(data)
+      setAllProjects(data)
+    })
+  }, [])
+
 
   return (
     <>
@@ -24,11 +36,16 @@ function Home() {
       </div>
       <div className='projects-presentation' onClick={handleOpenProject}>
         <h1>Mes projets</h1>
-        <span className={projectIsOpen ? 'project-arrow open-project' : 'project-arrow'} style={{ backgroundImage: `url(${arrowUp})` }} />
+        <span className={projectIsOpen ? 'project-arrow open-project' : 'project-arrow'} style={{ backgroundImage: `url(${arrowDown})` }} />
       </div>
       <div className='personnal-presentation' onClick={handleOpenPresentation}>
-        <h1>Qui suis-je ?</h1>
-        <span className={presentationIsOpen ? 'presentation-arrow open-presentation' : 'presentation-arrow'} style={{ backgroundImage: `url(${arrowUp})` }} />
+        <div className='presentation-title'>
+          <h1>Qui suis-je ?</h1>
+          <span className={presentationIsOpen ? 'presentation-arrow open-presentation' : 'presentation-arrow'} style={{ backgroundImage: `url(${arrowDown})` }} />
+        </div>
+        <div className={presentationIsOpen ? 'presentation-details shown' : 'presentation-details hidden'}>
+          <h2>Ingénieure chimiste de formation</h2>
+        </div>
       </div>
     </>
   )
