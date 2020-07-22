@@ -1,4 +1,4 @@
-CREATE TABLE `portfolio`.`project` (
+CREATE TABLE `project` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `image` VARCHAR(500) NULL,
@@ -6,22 +6,26 @@ CREATE TABLE `portfolio`.`project` (
   `duration` VARCHAR(45) NULL,
   `presentation` VARCHAR(45) NULL,
   `client_id` INT NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-  CREATE TABLE `portfolio`.`client` (
+CREATE TABLE `client` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NULL,
   `company` VARCHAR(45) NULL,
   `website` VARCHAR(500) NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `portfolio`.`techno` (
+CREATE TABLE `techno` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-CREATE TABLE `portfolio`.`project_techno` (
+CREATE TABLE `project_techno` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `id_techno` INT NULL,
   `id_project` INT NULL,
-  PRIMARY KEY (`id`));
+  PRIMARY KEY (`id`))
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
