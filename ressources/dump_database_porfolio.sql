@@ -43,4 +43,6 @@ ADD COLUMN `logo` VARCHAR(500) NULL AFTER `client_id`;
 ALTER TABLE `portfolio`.`project` 
 ADD COLUMN `content` VARCHAR(45) NULL AFTER `logo`;
 
+ALTER TABLE `portfolio`.`project` 
+CHANGE COLUMN `content` `content` VARCHAR(1000) NULL DEFAULT NULL ;
 

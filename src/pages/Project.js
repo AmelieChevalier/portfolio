@@ -27,16 +27,19 @@ return (
   <div className='full-project-container'> 
     <h1>{currentProject.name}</h1>
     <img src={currentProject.image} alt="project-illustration" className="full-project-image" />
-    <div className='full-presentation'>
-      <h2>Présentation du projet</h2>
-      <p>{currentProject.content}</p>
-    </div>
-    <p>Durée : {currentProject.duration}</p>
-    <div className='client-details'>
-      <h3>Client</h3>
-      <p>Nom : {currentProject.client.name}</p>
-      <p>Entreprise: {currentProject.client.company}</p>
-      <a href={`${currentProject.client.website}`} target='_blank' rel='noopener noreferrer'>Site internet</a>
+    <div className='sections-project'>
+      <div className='full-presentation sub-section-project'>
+        <h2>Présentation du projet</h2>
+        <p>{currentProject.content}</p>
+        <p>Durée : {currentProject.duration}</p>
+        <a href={`${currentProject.link}`} target='_blank' rel='noopener noreferrer'>Lien</a>
+      </div>
+      <div className='client-details sub-section-project'>
+        <h2>Client</h2>
+        <p>Nom : {currentProject.client.name}</p>
+        <p>Entreprise: {currentProject.client.company}</p>
+        <a href={`${currentProject.client.website}`} target='_blank' rel='noopener noreferrer'>Site internet</a>
+      </div>
     </div>
   </div>
   )}

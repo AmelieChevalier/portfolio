@@ -16,5 +16,37 @@
 }
 
 .project-page h1, .project-page h2, .project-page h3, .project-page p, .project-page a {
-  padding-left: 15px;
+  text-align: center;
+}
+
+.sections-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sub-section-project {
+  margin: 0 15px;
+  margin: 15px;
+  width: 400px;
+  border: 1px solid rgba(130, 186, 173, 0.3);
+  padding: 15px;
+}
+
+.sub-section-project p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 600px) {
+  .sections-project {
+    flex-direction: column;
+  }
+
+  .sub-section-project {
+    margin: 0 15px;
+    margin: 15px;
+    width: 300px;
+    border: 1px solid rgba(130, 186, 173, 0.3);
+    padding: 15px;
+  }
 }
