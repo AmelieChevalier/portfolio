@@ -14,34 +14,32 @@
   justify-content: center;
 }
 
-.presentation-arrow, .project-arrow {
-  background-position:center;
-  background-size:cover;
-  width:30px;
-  height:30px;
-  margin-left: 30px;
-  transform: rotate(0deg);
-  transition: all 0.4s ease-in-out;
-}
-
-.project-arrow.open-project, .presentation-arrow.open-presentation {
-  transform: rotate(180deg);
-}
-
 .projects-presentation {
-  margin-top: 150px;
+  margin-top: 100px;
+}
+
+.projects-presentation .project-title {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.personnal-presentation .presentation-details.shown {
-  background-color: rgba(130, 186, 173, 0.3);
-  transition: all 0.4s ease-in-out;
-  opacity: 1;
+
+.sections-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.personnal-presentation .presentation-details.hidden {
-  transition: all 0.4s ease-in-out;
-  opacity: 0;
+.project-details {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-details {
+    display: flex;
+    flex-direction: column;
+  }
 }
