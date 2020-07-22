@@ -21,7 +21,7 @@ function Home() {
       <div className="presentation">
         <h1>AMELIE CHEVALIER</h1>
         <h2>Developpeuse Web</h2>
-        <h2>ReactJS | NodeJS</h2>
+        <h2>React JS | Node JS</h2>
       </div>
       <div className="sections-container">
         <div className="projects-presentation">
