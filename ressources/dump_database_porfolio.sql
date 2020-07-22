@@ -1,3 +1,7 @@
+CREATE DATABASE `portfolio`;
+
+USE `portoflio`;
+
 CREATE TABLE `project` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
@@ -28,6 +32,7 @@ CREATE TABLE `project_techno` (
   `id_techno` INT NULL,
   `id_project` INT NULL,
   PRIMARY KEY (`id`))
+  ENGINE=InnoDB DEFAULT CHARSET=utf8;
   
 ALTER TABLE `project` 
 CHANGE COLUMN `presentation` `presentation` LONGTEXT NULL DEFAULT NULL ;

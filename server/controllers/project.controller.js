@@ -12,7 +12,7 @@ class ProjectsController {
 
     try {
       const project = new Project(req.body);
-      if (await Project.nameAlreadyExists(project.email)) {
+      if (await Project.nameAlreadyExists(project.name)) {
         res.status(400).send({ errorMessage: 'A project with this name already exists !' });
       } else {
         const data = await Project.create(project);
@@ -69,6 +69,7 @@ class ProjectsController {
       if (err.kind === 'not_found') {
         res.status(404).send({ errorMessage: `Project with id ${req.params.id} not found.` });
       } else {
+        console.log(req.body)
         res.status(500).send({ errorMessage: 'Error updating project with id ' + req.params.id });
       }
     }

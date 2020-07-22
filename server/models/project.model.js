@@ -17,7 +17,7 @@ class Project {
   }
 
   static async findById (id) {
-    return db.query(`SELECT * FROM customers WHERE id = ${id}`)
+    return db.query(`SELECT * FROM project WHERE id = ${id}`)
       .then(rows => {
         if (rows.length) {
           return Promise.resolve(rows[0]);
@@ -46,7 +46,7 @@ class Project {
 
   static async updateById (id, project) {
     return db.query(
-      'UPDATE project SET name = ?, image = ?, link = ?, duration = ?, presentation = ? client_id = ? WHERE id = ?',
+      'UPDATE project SET name = ?, image = ?, link = ?, duration = ?, presentation = ?, client_id = ? WHERE id = ?',
       [project.name, project.image, project.link, project.duration, project.presentation, project.client_id, id]
     ).then(() => this.findById(id));
   }
