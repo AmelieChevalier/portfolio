@@ -53,15 +53,16 @@ function Home() {
               <h2 >Formation</h2>
               <p>Ingénieure chimiste de formation, je me suis reconvertie en developpment Web à la Wild Code School de Lyon.
               </p>
-              <p>Après avoir obtenu mon diplôme d'ingénieur, j'ai travaillé quelques années dans le domaine pharmaceutique. Si le secteur me plaisait, mon métier ne m'épanouissait pas au quotidien. Le besoin de challenge m'a poussé à me reconvertir. Découvrir le développement web répond à ces besoins. Idéalement, j'aspire à combiner mes nouvelles compétences de developpeuse web et mon attrait pour le domaine de la santé.</p>
+              <p>Après avoir obtenu mon diplôme d'ingénieur, j'ai travaillé quelques années dans le domaine pharmaceutique. Si le secteur me plaisait, mon métier ne m'épanouissait pas au quotidien. Le besoin de challenge m'a poussé à me reconvertir.</p>
+              <p>Découvrir le développement web répond à ces besoins. Idéalement, j'aspire à combiner mes nouvelles compétences de developpeuse web et mon attrait pour le domaine de la santé.</p>
             </div>
             <div className='sub-section-presentation'>
             <h2>Compétences</h2>
             <h3>Hard skills</h3>
             <p>HTML - CSS - React.js - Node.js - mySQL - Git</p>
             <h3>Soft skills</h3>
-            <p> Méthode Agile SCRUM - Rigueur - Détermination </p>
-            <a href='https://www.linkedin.com/in/ameliechevalier/' target='_blank' rel='noopener noreferrer'>Mon linkedIn</a>
+            <p className='soft-skills'> Méthode Agile SCRUM - Rigueur - Détermination </p>
+            <a href='https://www.linkedin.com/in/ameliechevalier/' target='_blank' rel='noopener noreferrer' className='linkedin'>Mon linkedIn</a>
             </div>
           </div>
         </div>

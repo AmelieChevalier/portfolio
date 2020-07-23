@@ -190,7 +190,7 @@ export default function AddProject() {
             onChange={(e) => handleChange(e)}
           />
         </div>
-        <p>* champ obligatoire</p>
+        <p>* Champ obligatoire</p>
         <button type="submit" className="btn publish">
           Publier
         </button>

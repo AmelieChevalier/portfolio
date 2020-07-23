@@ -46,7 +46,7 @@ a.retour-acceuil {
 }
 
 .admin-project-container {
-  border: 1px solid #262626;
+  border: 1px solid rgba(38, 38, 38, 0.5);
   width: 600px;
   padding-bottom: 20px;
   margin: 0 auto;

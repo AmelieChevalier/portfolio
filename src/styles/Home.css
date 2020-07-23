@@ -63,6 +63,12 @@
   text-align: center;
 }
 
+.sub-section-presentation p.soft-skills {
+  text-align: center;
+  margin-bottom: 90px;
+}
+
+
 @media only screen and (max-width: 600px) {
   .project-details {
     display: flex;
@@ -80,7 +86,7 @@
   .sub-section-presentation {
     margin: 0 15px;
     margin: 15px;
-    width: 300px;
+    width: 250px;
     border: 1px solid rgba(130, 186, 173, 0.3);
     padding: 15px;
   }

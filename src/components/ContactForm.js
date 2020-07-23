@@ -85,7 +85,7 @@ export default function ContactForm() {
               required
             />
           </div>
-          <p>* champ obligatoire</p>
+          <p>* Champs obligatoire</p>
           <button type="submit" className="btn publish">
             Envoyer
           </button>
