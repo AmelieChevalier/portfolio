@@ -2,3 +2,35 @@
   display: flex;
   flex-direction: column;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form .input-line {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+input.form-input, textarea {
+  width:300px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .contact-form .input-line {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-form .input-line .label {
+    margin: 10px 0;
+  }
+
+}

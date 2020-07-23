@@ -1,18 +1,24 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
-import returnImage from '../images/return.png';
-import '../styles/ContactForm.css';
+import { Link } from "react-router-dom";
+import returnImage from "../images/return.png";
+import "../styles/ContactForm.css";
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    message: ""
+    message: "",
   });
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    console.log(formData);
     alert("Votre message a bien été envoyé !");
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
   };
 
   const handleChange = (event) => {
@@ -28,9 +34,9 @@ export default function ContactForm() {
         className="retour-acceuil"
         style={{ backgroundImage: `url(${returnImage})` }}
       />
-      <div className="contact-form">
+      <div className="contact-form-container">
         <h1>Me contacter</h1>
-        <form className="new-project-form" onSubmit={(e) => handleSubmit(e)}>
+        <form className="contact-form" onSubmit={(e) => handleSubmit(e)}>
           <div className="input-line">
             <label className="label" htmlFor="name">
               Votre nom :
