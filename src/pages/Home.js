@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <>
-      <div className='home-header' style={{backgroundImage:  `url(${backGroundImage})`}}>
+      <div className='home-header' style={{backgroundImage: `url(${backGroundImage})`}}>
       <Header />
       <div className="presentation">
         <h1>AMELIE CHEVALIER</h1>

@@ -1,0 +1,46 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+a.retour-acceuil {
+  align-self: flex-end;
+  background-position:center;
+  background-size:cover;
+  width:30px;
+  height:30px;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.projects-list {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.project-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.bin {
+  background-position:center;
+  background-size:cover;
+  height: 15px;
+  width: 15px;
+}
+
+.add-project-line {
+  display: flex;
+  justify-content: center;
+}
+
+.add-project-line .add-project {
+  background-position:center;
+  background-size:cover;
+  height: 15px;
+  width: 15px;
+  margin: auto 10px;
+}

@@ -1,0 +1,4 @@
+.new-project-page {
+  display: flex;
+  flex-direction: column;
+}

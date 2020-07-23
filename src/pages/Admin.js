@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import binImage from '../images/bin.png';
+import returnImage from '../images/return.png';
+import addImage from '../images/add.png';
+import '../styles/Admin.css'
 
 export default function Admin () {
 
@@ -23,20 +27,28 @@ export default function Admin () {
   
 
   return (
-    <>
-    <Link to='/' className='retour'>Retour</Link>
+    <div className='dashboard'>
+    <Link to='/' className='retour-acceuil' style={{backgroundImage:`url(${returnImage})`}} />
 
-    <div className='project-container'>
-    <div className='projectss-list'>
-      <ul>
-      {allProjects && allProjects.map((project) => {
-      return (
-        <li key={project.id}>{project.name}<span onClick={() => {handleDeleteProject(project.id)}}>Supprimer</span></li>  
-      )
-    })}
-      </ul>
+    <div className='admin-project-container'>
+      <h2>Gestion des projets</h2>
+      <div className='projects-list'>
+        <ul>
+        {allProjects && allProjects.map((project) => {
+        return (
+          <div className='project-line'>
+          <li key={project.id}>{project.name}</li>
+          <span className='bin' style={{backgroundImage:`url(${binImage})`}} onClick={() => {handleDeleteProject(project.id)}}/>
+          </div>
+        )
+      })}
+        </ul>
+      </div>
+        <Link to='/dashboard/add-project' className='add-project-line'>
+          <p>Ajouter un nouveau projet</p>
+          <span className='add-project' style={{backgroundImage:`url(${addImage})`}}/>
+        </Link>
     </div>
     </div>
-    </>
   )
 }

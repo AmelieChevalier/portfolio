@@ -6,7 +6,7 @@ body {
   background-color: white
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, span {
   color: rgba(34, 129, 119);
 }
 
@@ -24,4 +24,9 @@ ul li {
   color: rgba(34, 129, 119);
   list-style-type: none;
   text-align: left;
+}
+
+ul {
+  padding-inline-start: 0px;
+
 }
