@@ -37,6 +37,37 @@
   text-align: left;
 }
 
+/* HEADER */
+
+.header-project {
+  display: flex;
+}
+
+.contact-project p {
+  color: black;
+}
+
+.header-container-project {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-container-project p {
+  padding-top: 45px;
+  padding-right: 30px;
+}
+
+.header-project .picto-admin {
+  background-position:center;
+  background-size:cover;
+  width:30px;
+  height:30px;
+  margin-left: auto;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
 @media only screen and (max-width: 600px) {
   .sections-project {
     flex-direction: column;

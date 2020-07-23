@@ -27,9 +27,15 @@ input.form-input, textarea {
 }
 
 @media only screen and (max-width: 600px) {
+
   .new-project-form .input-line {
     width: 300px;
     display: flex;
     flex-direction: column;
   }
+
+  .new-project-form .input-line .label {
+    margin: 10px 0;
+  }
+
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import adminImageBlack from '../images/adminBlack.png';
 import axios from 'axios';
 import '../styles/Project.css';
 
@@ -20,6 +21,14 @@ useEffect(() => {
 
 return (
   <div className='project-page'>
+      <div className='header-container-project'>
+      <div className='contact-project'>
+        <p>Me contacter</p>
+      </div>
+      <Link to='/dashboard' className='header-project'>
+        <div className='picto-admin' style={{backgroundImage: `url(${adminImageBlack})`}}/>
+      </Link>
+    </div>
   <Link to='/' className='retour'>Retour</Link>
   {(currentProject ) && (
   <div className='full-project-container'> 
