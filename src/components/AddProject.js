@@ -7,7 +7,7 @@ import axios from 'axios';
 export default function AddProject() {
 
   const [newProject, setNewProject] = useState({
-    name: '',
+    name: 'test publication',
     image :'',
     link: '',
     duration: '',
@@ -33,7 +33,7 @@ export default function AddProject() {
       <Link to='/dashboard' className='retour-acceuil' style={{backgroundImage:`url(${returnImage})`}} />
     <h1>Nouveau projet</h1>
     <form className='new-project-form' onSubmit={(e) => handleSubmit(e)}>
-
+    <button type='submit' className='btn publish'>Publier</button>
     </form>
     </div>
   )

@@ -36,8 +36,8 @@ export default function Admin () {
         <ul>
         {allProjects && allProjects.map((project) => {
         return (
-          <div className='project-line'>
-          <li key={project.id}>{project.name}</li>
+          <div className='project-line' key={project.id}>
+          <li>{project.name}</li>
           <span className='bin' style={{backgroundImage:`url(${binImage})`}} onClick={() => {handleDeleteProject(project.id)}}/>
           </div>
         )
