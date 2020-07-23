@@ -2,6 +2,7 @@ import React from "react";
 import Home from "./pages/Home";
 import Admin from './pages/Admin';
 import AddProject from './components/AddProject';
+import ContactForm from './components/ContactForm';
 
 import Project from './pages/Project';
 import "./App.css";
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/dashboard' component={Admin} />
           <Route exact path ='/dashboard/add-project' component={AddProject} />
           <Route exact path='/project/:id' component={Project} />
+          <Route exact path='/contact' component={ContactForm} />
       </Switch>
       </div>
     </Router>

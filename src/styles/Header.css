@@ -6,6 +6,11 @@
   color: white;
 }
 
+.contact p:hover{
+  text-decoration: underline;
+  color: white;
+}
+
 .header-container {
   display: flex;
   justify-content: flex-end;

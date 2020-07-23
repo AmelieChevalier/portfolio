@@ -7,7 +7,7 @@ export default function Header () {
   return (
     <div className='header-container'>
       <div className='contact'>
-        <p>Me contacter</p>
+        <Link to='/contact'><p>Me contacter</p></Link>
       </div>
       <Link to='/dashboard' className='header'>
         <div className='picto-admin' style={{backgroundImage: `url(${adminImage})`}}/>

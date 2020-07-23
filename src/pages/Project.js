@@ -23,9 +23,9 @@ return (
   <div className='project-page'>
       <div className='header-container-project'>
       <Link to='/' className='retour-project'>Retour à l'acceuil</Link>
-      <div className='contact-project'>
+      <Link to='/contact' className='contact-project'>
         <p>Me contacter</p>
-      </div>
+      </Link>
       <Link to='/dashboard' className='header-project'>
         <div className='picto-admin' style={{backgroundImage: `url(${adminImageBlack})`}}/>
       </Link>
