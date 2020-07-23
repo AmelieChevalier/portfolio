@@ -39,7 +39,7 @@ export default function ContactForm() {
         <form className="contact-form" onSubmit={(e) => handleSubmit(e)}>
           <div className="input-line">
             <label className="label" htmlFor="name">
-              Votre nom :
+              Votre nom* :
             </label>
             <input
               className="form-input"
@@ -55,7 +55,7 @@ export default function ContactForm() {
           </div>
           <div className="input-line">
             <label className="label" htmlFor="email">
-              Votre email :
+              Votre email* :
             </label>
             <input
               className="form-input"
@@ -71,7 +71,7 @@ export default function ContactForm() {
           </div>
           <div className="input-line">
             <label className="label" htmlFor="message">
-              Votre nom :
+              Votre message* :
             </label>
             <textarea
               className="form-input"
@@ -87,7 +87,7 @@ export default function ContactForm() {
           </div>
           <p>* champ obligatoire</p>
           <button type="submit" className="btn publish">
-            Publier
+            Envoyer
           </button>
         </form>
       </div>

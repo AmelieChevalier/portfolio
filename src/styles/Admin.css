@@ -45,9 +45,27 @@ a.retour-acceuil {
   margin: auto 10px;
 }
 
+.admin-project-container {
+  border: 1px solid #262626;
+  width: 600px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+.admin-project-container h1 {
+  margin-bottom: 40px;
+}
+
 @media only screen and (max-width: 600px) {
   .projects-list {
     width: 250px;
+    margin: 0 auto;
+  }
+
+  .admin-project-container {
+    border: none;
+    width: 100%;
+    padding-bottom: 20px;
     margin: 0 auto;
   }
   

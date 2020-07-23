@@ -45,6 +45,7 @@ export default function AddProject() {
         className="retour-acceuil"
         style={{ backgroundImage: `url(${returnImage})` }}
       />
+      <div className='new-project-form-container'>
       <h1>Nouveau projet</h1>
       <form className="new-project-form" onSubmit={(e) => handleSubmit(e)}>
         <div className='input-line'>
@@ -194,6 +195,7 @@ export default function AddProject() {
           Publier
         </button>
       </form>
+      </div>
     </div>
   );
 }

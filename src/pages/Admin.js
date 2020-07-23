@@ -31,7 +31,7 @@ export default function Admin () {
     <Link to='/' className='retour-acceuil' style={{backgroundImage:`url(${returnImage})`}} />
 
     <div className='admin-project-container'>
-      <h2>Gestion des projets</h2>
+      <h1>Gestion des projets</h1>
       <div className='projects-list'>
         <ul>
         {allProjects && allProjects.map((project) => {
