@@ -17,7 +17,8 @@
     "db-migrate-mysql": "^2.1.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mysql": "^2.18.1"
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.4.10"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
