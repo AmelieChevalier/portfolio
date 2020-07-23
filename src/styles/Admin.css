@@ -56,6 +56,10 @@ a.retour-acceuil {
   margin-bottom: 40px;
 }
 
+.bin:hover{
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   .projects-list {
     width: 250px;

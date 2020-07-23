@@ -22,7 +22,9 @@ export default function Admin () {
 
   const handleDeleteProject = (id) => {
     console.log(id)
-    axios.delete(`http://localhost:4000/projects/${id}`)
+    if(window.confirm('Etes-vous sûre de vouloir supprimer ce projet ?')){
+      axios.delete(`http://localhost:4000/projects/${id}`)
+    }
   }
   
 
@@ -37,7 +39,7 @@ export default function Admin () {
         {allProjects && allProjects.map((project) => {
         return (
           <div className='project-line' key={project.id}>
-          <li>{project.name}</li>
+          <li><Link to={`/project/${project.id}`}>{project.name}</Link></li>
           <span className='bin' style={{backgroundImage:`url(${binImage})`}} onClick={() => {handleDeleteProject(project.id)}}/>
           </div>
         )
