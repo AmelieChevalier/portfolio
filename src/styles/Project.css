@@ -5,10 +5,15 @@
   text-align: left;
 }
 
-.retour {
-  align-self: flex-end;
-  margin-right: 10px;
-  margin-top: 20px;
+.retour-project {
+  padding-top: 45px;
+  padding-right: 30px;
+  color: black !important ;
+  font-weight: 300;
+}
+
+.retour-project:hover {
+  text-decoration: underline;
 }
 
 .full-project-image {
@@ -45,6 +50,10 @@
 
 .contact-project p {
   color: black;
+}
+
+.contact-project p:hover {
+  text-decoration: underline;
 }
 
 .header-container-project {

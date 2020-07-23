@@ -22,6 +22,7 @@ useEffect(() => {
 return (
   <div className='project-page'>
       <div className='header-container-project'>
+      <Link to='/' className='retour-project'>Retour à l'acceuil</Link>
       <div className='contact-project'>
         <p>Me contacter</p>
       </div>
@@ -29,7 +30,6 @@ return (
         <div className='picto-admin' style={{backgroundImage: `url(${adminImageBlack})`}}/>
       </Link>
     </div>
-  <Link to='/' className='retour'>Retour</Link>
   {(currentProject ) && (
   <div className='full-project-container'> 
     <h1>{currentProject.name}</h1>
@@ -39,7 +39,7 @@ return (
         <h2>Présentation du projet</h2>
         <p>{currentProject.content}</p>
         <p>Durée : {currentProject.duration}</p>
-        <a href={`${currentProject.link}`} target='_blank' rel='noopener noreferrer'>Lien</a>
+        <a href={`${currentProject.link}`} target='_blank' rel='noopener noreferrer'>Lien vers le projet</a>
       </div>
       <div className='client-details sub-section-project'>
         <h2>Client</h2>
