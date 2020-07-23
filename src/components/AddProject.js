@@ -15,7 +15,7 @@ export default function AddProject() {
     logo: "",
     content: "",
     client_website: "",
-    client_company: "",
+    client_company: ""
   });
 
   const handleSubmit = (event) => {
@@ -24,7 +24,19 @@ export default function AddProject() {
       .post("http://localhost:4000/projects", newProject)
       .then((res) => {
         console.log(res);
-        alert("Le projet a bien été posté");
+        alert("Le projet a bien été posté")
+        setNewProject({
+          name: "",
+          image: "",
+          link: "",
+          duration: "",
+          presentation: "",
+          client_name: "",
+          logo: "",
+          content: "",
+          client_website: "",
+          client_company: ""
+        });
       })
       .catch((err) => {
         alert("Projet non publié : le nom existe déjà !");
