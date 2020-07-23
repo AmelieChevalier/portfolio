@@ -42,3 +42,6 @@ ALTER TABLE `project`
 ADD COLUMN `client_website` VARCHAR(100) NULL AFTER `content`,
 ADD COLUMN `client_company` VARCHAR(45) NULL AFTER `client_website`,
 CHANGE COLUMN `client_id` `client_name` VARCHAR(45) NULL DEFAULT NULL ;
+
+ALTER TABLE `project` 
+CHANGE COLUMN `presentation` `presentation` VARCHAR(300) NULL DEFAULT NULL ;
